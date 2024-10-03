@@ -11,7 +11,6 @@ namespace task_2
         private static int DefaultValue = 0;
 
         private int innerValue;
-
         private BlackBoxInteger(int innerValue)
         {
             this.innerValue = innerValue;
