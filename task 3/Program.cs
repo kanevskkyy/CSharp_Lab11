@@ -4,7 +4,7 @@ using task_3;
 
 class Program
 {
-    static void Main(string[] args)
+    static void Main()
     {
         Console.Write("Enter signals of traffic lights = ");
         string[] initialSignals = Console.ReadLine().Split();

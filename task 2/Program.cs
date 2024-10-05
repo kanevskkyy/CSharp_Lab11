@@ -23,8 +23,8 @@ class Task
 
             MethodInfo method = blackBoxType.GetMethod(methodName, BindingFlags.Instance | BindingFlags.NonPublic);
             method.Invoke(blackBoxInstance, new object[] { value });
-            int innerValue = (int)innerValueField.GetValue(blackBoxInstance);
-            Console.WriteLine("Result = " + innerValue);
+            int result = (int)innerValueField.GetValue(blackBoxInstance);
+            Console.WriteLine("Result = " + result);
             Line();
         }
     }
