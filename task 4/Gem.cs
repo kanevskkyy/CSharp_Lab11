@@ -8,9 +8,9 @@ namespace task_4
 {
     internal class Gem
     {
-            public int Strength { get; }
-            public int Agility { get; }
-            public int Vitality { get; }
+        public int Strength { get; }
+        public int Agility { get; }
+        public int Vitality { get; }
 
         public Gem(int strength, int agility, int vitality, string clarity)
         {
