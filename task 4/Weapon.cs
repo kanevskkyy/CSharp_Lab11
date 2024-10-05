@@ -28,6 +28,16 @@ namespace task_4
         public int Agility { get; set; }
         public int Vitality { get; set; }
 
+        public Weapon(string name, int minDamage, int maxDamage, int sockets, Rarity rarity)
+        {
+            Name = name;
+            MinDamage = minDamage * (int)rarity;
+            MaxDamage = maxDamage * (int)rarity;
+            Sockets = sockets;
+            gems = new Gem[sockets];
+            this.rarity = rarity;
+        }
+
 
         public void AddGem(int index, Gem gem)
         {
@@ -44,6 +54,26 @@ namespace task_4
 
                 this.MinDamage += gem.Agility * 1;
                 this.MaxDamage += gem.Agility * 4;
+            }
+        }
+
+        public void RemoveGem(int index)
+        {
+            if (index < 0 || index >= gems.Length) throw new ArgumentException("Index is out of range");
+            else
+            {
+                Gem gem = new Gem();
+                gem = gems[index];
+
+                gems[index] = null;
+
+                Strength -= gem.Strength;
+                Agility -= gem.Agility;
+
+                MinDamage -= gem.Strength * 2;
+                MaxDamage -= gem.Strength * 3;
+                this.MinDamage -= gem.Agility * 1;
+                this.MaxDamage -= gem.Agility * 4;
             }
         }
 
