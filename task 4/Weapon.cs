@@ -69,13 +69,16 @@ namespace task_4
 
                 Strength -= gem.Strength;
                 Agility -= gem.Agility;
+                Vitality -= gem.Vitality;
 
                 MinDamage -= gem.Strength * 2;
                 MaxDamage -= gem.Strength * 3;
-                this.MinDamage -= gem.Agility * 1;
-                this.MaxDamage -= gem.Agility * 4;
+                MinDamage -= gem.Agility * 1;
+                MaxDamage -= gem.Agility * 4;
             }
         }
+
+
 
         public override string ToString()
         {
